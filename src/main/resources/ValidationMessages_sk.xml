@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="person.birthNumber.validate">Špatný format rodného čísla.</entry>
+  <entry key="account.number.validate">Chybné číslo účtu.</entry>
+  <entry key="customer.number.validate">Chybný formát čísla, očekáváno 10 znaků (např. 1331234567).</entry>
+</properties>

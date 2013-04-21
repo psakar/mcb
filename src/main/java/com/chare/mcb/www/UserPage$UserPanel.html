@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd"
+>
+<body>
+<wicket:panel>
+  <form wicket:id="form">
+	 <table border="0" class="content" cellpadding="1" cellspacing="0"	width="100%">
+		 <tr>
+		  <td><span wicket:id="username_"></span></td>
+		  <td>
+		    <input wicket:id="username"></input>
+		    <span wicket:id="usernameFeedback"></span>
+		   </td>
+		 </tr>
+		 <tr>
+      <td><span wicket:id="surname_"></span></td>
+      <td>
+        <input wicket:id="surname"></input>
+        <span wicket:id="surnameFeedback"></span>
+      </td>
+     </tr>
+     <tr>
+      <td><span wicket:id="name_"></span></td>
+      <td>
+        <input wicket:id="name"></input>
+        <span wicket:id="nameFeedback"></span>
+      </td>
+     </tr>
+     <tr>
+      <td><span wicket:id="email_"></span></td>
+      <td>
+        <input wicket:id="email"></input>
+        <span wicket:id="emailFeedback"></span>
+      </td>
+     </tr>
+     <tr>
+      <td><span wicket:id="phone_"></span></td>
+      <td><input wicket:id="phone"></input></td>
+     </tr>
+     <tr>
+      <td><span wicket:id="languageId_"></span></td>
+      <td><select wicket:id="languageId"></select></td>
+     </tr>
+     <tr>
+      <td><span wicket:id="unsuccessfulCount_"></span></td>
+      <td><span wicket:id="unsuccessfulCount"></span></td>
+     </tr>
+     <tr>
+      <td><span wicket:id="lastAccess_"></span></td>
+      <td><span wicket:id="lastAccess"></span></td>
+     </tr>
+     <tr>
+      <td><span wicket:id="enabled_"></span></td>
+      <td><input type="checkbox" wicket:id="enabled"></input></td>
+     </tr>
+	 </table>
+	 <div wicket:id="roleListPanel"></div>
+	 <br/>
+	 <input wicket:id="save" type="submit"></input>
+	</form>
+</wicket:panel>
+</body>
+</html>

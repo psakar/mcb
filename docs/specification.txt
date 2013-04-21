@@ -1,0 +1,474 @@
+MCB
+---
+Master card processing
+Petr Sakar (saki@chare.eu)
+23/04/2012
+
+
+
+Description
+-----------
+Application for backoffice processing of card transactions of clients of bank
+Application will maintain:
+- list of users
+- list of cards
+- list of fee types
+
+Daily will be generated posting files to Tolas.
+Application will generate statements for clients.
+
+
+List of cards
+-------------
+For each card following details must be entered:
+- card number
+- card holder name
+- settlement account (197123456700EUR)
+- statement period (daily / weekly / monthly)
+- activeFrom (date)
+- activeTo (optional date)
+- mail address
+  mandatory fields:
+  name
+  street
+  town
+  country
+  zip
+- card type
+- list of fee types
+  - special conditions (client do not pay fee of type XY or fee amount is different) (optional)
+  - card type of each fee type is equal to the card type of this card
+- limit (optional amount)
+- last statement nr. (optional integer)
+- last statement date (optional)
+  - when was generated last card statement
+- next statement date (optional)
+  - when should be generated next card statement
+
+User must be able to export list to XLS
+
+Card type
+---------
+- code
+- description
+(link to list of fee types)
+
+Transfer type
+-------------
+- code
+- description
+- settlement type ('book to client', 'book to bank cost account', 'book to client with fee')
+- settlement account (required for type 'book to bank cost account') (14 or 15 chars long)
+- list of fee types (required for 'book to client with fee')
+- optional card transaction type (used during parsing card transaction details from statement line)
+  - card transaction
+	- fee for card transaction (related transaction must exist)
+	- card fee (without transaction date)
+
+
+
+For every movement type of type book to client must exist fee type for every card type
+
+Fee type
+--------
+- code
+- description
+- card type
+- fixed amount
+- percentage
+- transfer type
+- settlement account (197123456700EUR) (required if percentage or amount is not zero) (14 or 15 chars long)
+
+
+Daily procedure (manual)
+------------------------
+1. user will export statement from Internet banking of UniCredit bank in swift format  (extension ".sta") (out of scope)
+2. user will upload the statement, application will check statement number is sequential, and find transfer type for each line where possible.
+When transfer type is found, line is resolved as follows:
+if transfer type implies line contains card transaction, card transaction details are parsed.
+if transfer type implies card transactions fee should be applied, fee type is searched based on transfer type and card type. When the fee type is found, fee is calculated.
+3. user will fill in missing information - missing transfer types and unknown cards. When transfer type is set by user, application will resolve line in the same was as during statement upload
+When all statement lines have transfer types and required fee types filled in, application will show button 'Generate bookings'
+4. user will press the button 'Generate bookings' and application will generate bookings and prepare posting file for export.
+Statement is marked as booked.
+5. another user will approve export of posting file to Tolas (list of posting files), application will generate the posting file for Tolas
+
+
+Notes:
+As a rule user generating posting file should be different from user exporting the file.
+One statement will generate one posting file.
+Fee for card transaction without fee - error - solve by manually overriding transfer type
+Calculated fee is settled to client account with original fee
+Before generating posting file for the statement application must check all card numbers used in statement line card transactions are valid
+
+
+Card statements procedure (automatic)
+-------------------------------------
+Generate statements per card daily / weekly / monthly. Statements will be sent to printer and archived in PDF
+One file per statement.
+Statement filename CARDNUMBER_197123456700EUR_NNN_yyyyMMdd_HHMM.pdf
+ CARDNUMBER is card number
+ NNN is statement number
+ yyyyMMdd_HHMM is date and time when the statement was generated
+
+Card transaction and fee should be listed together
+
+Card statement localization
+- localized titles
+- one date and number format for all locales dd.MM.yyyy #.##0,00
+
+
+Empty statements (no card transaction exist during statement period) should not be generated.
+
+Statement numbers have to be sequential.
+
+Date of next statement generating must be business day (either calculated date or first next business day)
+
+
+Statements are generated at the end of the business day including transactions booked during the day.
+
+
+
+Generate card statement on demand
+---------------------------------
+
+User will enter card number, statement date from and to and optional statement number.
+Application will generate card statement (user will download PDF file).
+If the statement would be empty, the PDF file is not generated and message "Statement is empty" is presented to the user.
+
+
+
+
+
+Booking generation
+------------------
+For each movement from statement generate one (or more) corresponding booking(s).
+
+Bookings are generated based on transfer type.
+Booking value date - date when is booking generated (can be different from date when posting file is generated)
+
+Transaction reference and sequence nr must be unique during the date
+
+Before generating posting file
+- check all card numbers used in statement line card transactions are valid
+- check today is business day (posting file can be generated only during business day)
+
+Before exporting posting file
+- check today is business day (posting file can be exported only during business day)
+
+
+Application settings
+--------------------
+booking accounts
+TRANSACT_ACC - transaction account (CPD)
+MIRROR_ACC   - mirror account (Unicredit Account)
+COST ACCOUNT - cost account
+
+Posting file filename pattern is specified in application setting FILENAME. If the pattern contains {datetime}, it is replaced with actual date time formatted according to the pattern specified
+in the application setting DATE_FORMAT
+
+
+Card transaction settlement
+---------------------------
+Debet client account credit ???? account with movement amount
+
+
+Card transaction fee settlement
+---------------------------
+Debet client account credit ???? account with fee amount calculated based on fee type from movement amount
+
+Generated fees
+--------------
+fee is generated only for transfer of transfer type with settlement type 'book to client with fee'
+based on transfer card number find card and its type. Based on card type and transfer type select corresponding fee type
+
+Fee amount calculation
+----------------------
+amount = feeType.amount + transfer.amount * feeType.percentage
+
+
+
+User administration
+-------------------
+User
+- username
+- name
+- email
+- valid to
+- enabled
+
+Roles
+- user administration
+- application administration
+- upload statement file
+- export posting file
+
+
+Audit trail
+-----------
+upload souboru
+export do tolasu
+zmeny v seznamech
+
+Time estimate
+=============
+
+*2h Analysis
+*2h Project setup
+4h User administration
+
+2h Settings
+6h Card list
+
+2h Statement upload
+6h Statement parsing (unicredit bank sk, format sta)
+
+4h Fee types
+4h Booking generating
+
+4h Booking fee generating
+4h Posting file export
+
+4h Statement report (+ extra time for layout)
+4h Statements generating
+
+4h Statement archiving
+4h Rezerve
+
+8h Audit trail
+
+8h testing
+
+Summary
+-------
+64h Development
+ 8h Testing
+---------------
+72h Total
+
+
+aproximatelly 10MD
+
+
+Extra work
+8h - fee based on card type (add card type, change card, change fee type (add))
+6h - manual handling of unresolved transfer type
+2h - specification changes
+4h - calendar
+3h - card list - sort, record count, delete card confirmation
+
+
+Typ pohybů na bankovních výpisech
+=================================
+
+Formát
+KÓD - krátký popis (úplný popis)
+
+Platby přeúčtované klientovi (bez výnosu)
+-----------------------------------------
+? - výber v hotovosti z bankomatu UniCredit Bank Slovakia
+? - výber hotovosti z bankomatu iných bánk v SR
+? - výber hotovosti z bankomatov bánk patriacich do UniCreditGroup (UCG)v zahraničí *
+? - výber eurohotovosti z bankomatu v rámci krajín EHS ** mimo bankomatov UCG
+? - výber hotovosti z bankomatu  v zahraničí z ostatných bankomatov
+? - výber hotovosti prostredníctvom služby Cash Advance v SR
+? - výber hotovosti prostredníctvom služby Cash Advance v zahraničí
+FMSCCLT - platbu kartou (platba u obchodníka v SR a v zahraničí vr.dobíjania kreditu mobilných operátorov cez bankomaty)
+
+
+Poplatky účtované bance (náklady)
+---------------------------------
+? - poplatek za správu (poplatok EUR 165,97 (SKK 5000) za mesacnu spravu platobnych kariet)
+? - poplatek za výpisy (poplatok EUR 66,39 za zasielanie SWIFTovych vypisov MT 940)
+
+
+Poplatky přeúčtované klientovi (bez výnosu)
+-------------------------------------------
+? - zrušenie karty
+? - poskytnutie hotovosti v núdzi
+? - núdzová karta v zahraničí
+FMSCFEE - poplatek za platbu kartou nebo výběr (poplatek za platbu u obchodníka v SR a v zahraničí vr.dobíjania kreditu mobilných operátorov cez bankomaty)
+
+
+Poplatky přeúčtované klientovi zvýšené o výnos banky
+----------------------------------------------------
+FMSCCRG - roční poplatok (line2 = Rocny poplatok za PK)
+FMSCCRG - změna limitu (line2 = Popl.- zmena limitu)
+FMSCCRG - blokácia karty (line2 = Popl.-blokacia karty)
+? - blokácia karty z dôvodu nedostatku prostriedkov
+? - neoprávnená reklamácia transakcie
+? - znovuvytlačenie PIN čísla (do 10 prac. dní)
+? - Expresné znovuvytlačenie PIN čísla (do 3 prac. dní)
+? - zmena PIN
+? - príplatok za expresné vydanie karty
+? - znovuvydanie karty, ktorej platnosť neskončila (pri strate, krádeží, poškodení)
+
+
+FMSCNONREF - vrácení poplatku
+- rucni zpracování
+
+
+
+Notes:
+return of money to client - if the fee was calculated for the original transasction, and fee setup is changed between original transaction and the reverse one, fee will be calculated based on new setup and thus returned amount will be different. The solution of such situation is out of scope of this applocation
+
+
+Entities
+========
+User
+- username
+- name
+- email
+- valid to
+- enabled
+- list of roles. Role values:
+		USER_ADMIN - user administration
+		APP_ADMIN - application administration
+		UPLOAD_STATEMENTS - upload statement file
+		EXPORT_POSTINGS - export posting file
+
+Card
+- number
+- holder name
+- card type (Bussines, Gold)
+- settlement account (format 197123456700EUR)
+- statement period. Possible values: daily / weekly / monthly
+- activeFrom (date)
+- activeTo (date) (optional)
+- mail address
+	- title (optional)
+	- name
+	- name2 (optional)
+	- street
+	- zip
+	- town
+	- country (optional)
+- list of fee exceptions (client do not pay fee of type XY)
+   - fee type
+   - discount (percentage)
+
+Card type
+- code
+- description
+
+Transfer type
+- code
+- description
+- settlementType  ('book to client', 'book to bank cost account')
+
+
+Fee type
+- card type
+- settlement account (format 197123456700EUR) (only for type 'book to bank cost account')
+- fixed amount of bank profit
+- percentage of bank profit
+- transfer type
+
+
+Statement
+- account
+- number
+- statement date
+- opening balance
+- closing balance
+- closing available balance
+- list of movements
+- source filename
+
+Movement
+- amount
+- value date
+- details
+- transfer type
+- card transaction (optional, based on transfer type)
+
+Card transaction
+- card number
+- date
+- amount
+- details 1
+- details 2
+- fee type
+
+Posting file
+- name
+- created (date)
+- created by (username, text, not reference)
+- exported (date) (optional)
+- exported by (username, text, not reference)
+- list of bookings
+
+Booking
+- amount
+- value date
+
+
+Services
+========
+FileUploader
+- read uploaded file into list of lines
+- parse list of lines into statement blocks
+- parse statement blocks into statements
+- store statements into database
+- create new posting file and generate for every statement bookings using booking generator
+
+BookingGenerator
+- generate bookings
+
+PostingFileExporter
+- export selected posting file
+
+ClientStatementGenerator
+- for every card, if the statement should be generated, create statement including all new movements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+zauctovani poplatku, jak jej generuje MCB nyni, je v souladu s principem zamezeni
+kompenzaxce nakladu a vynosu.
+Tenhle princip ma byt ale podle rozhodnuti nasich uctaru uplatnen pouze u pripadu,
+kde dochazi k navysovani poplatku
+originalne uctovanych UniCredit o 'marzi' COBA. V pripadech, kdy k navysovani
+poplatku nedochazi, napr. u vyberu z
+bankomatu nebo poplatku za platbu u obchodnika, je uctovani na naklady a vynosy
+irrelevantni.
+Cili, zauctovani poplatku, ktery neni navysen o marzi ma byt, nikoliv:
+
+Částka   Valuta   D. zaúč. Debit. účet     Kredit. účet    Detaily
+0,10 EUR 4.9.2012 4.9.2012 19746106106000  197931361000EUR SLOVNAFT A S SVK - SERED
+(688028)
+0,10 EUR 4.9.2012 4.9.2012 197931361000EUR 197720002500EUR SLOVNAFT A S SVK - SERED
+(688028)
+0,10 EUR 4.9.2012 4.9.2012 197931361000EUR 19735307304001  SLOVNAFT A S SVK - SERED
+(688028)
+0,10 EUR 4.9.2012 4.9.2012 197700565500EUR 197931361000EUR SLOVNAFT A S SVK - SERED
+(688028)
+
+nybrz jen:
+(zauctovani probehne pouze pres technicky ucet platebnich karet ECMC)
+
+Částka   Valuta   D. zaúč. Debit. účet     Kredit. účet    Detaily
+0,10 EUR 4.9.2012 4.9.2012 197931361000EUR 197720002500EUR SLOVNAFT A S SVK - SERED
+(688028)
+0,10 EUR 4.9.2012 4.9.2012 197700565500EUR 197931361000EUR SLOVNAFT A S SVK - SERED
+(688028)
+
+Nenapada mne jine reseni, nez pro rozdilne predpisy zauctovani poplatku zvolit jako
+klic v Tabulce poplatku napln pole
+'Castka EUR', kde je bud nula (0,00) nebo castka marze, o niz se poplatek navysuje.
+Je-li tato marze prave 0,00 , pak se uctuje jen 2 ucetnimi zapisy, jak popsano vyse.

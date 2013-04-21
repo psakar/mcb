@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<job-scheduling-data
+	xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData
+  http://www.quartz-scheduler.org/xml/job_scheduling_data_2_0.xsd"
+	version="2.0">
+	<!--
+	<calendar class-name="org.quartz.impl.calendar.HolidayCalendar"
+		replace="true">
+		<name>holidayCalendar</name>
+		<description>HolidayCalendar</description>
+		<base-calendar class-name="org.quartz.impl.calendar.WeeklyCalendar">
+			<name>weeklyCalendar</name>
+			<description>WeeklyCalendar</description>
+			<base-calendar class-name="org.quartz.impl.calendar.AnnualCalendar">
+				<name>annualCalendar</name>
+				<description>AnnualCalendar</description>
+			</base-calendar>
+		</base-calendar>
+	</calendar>
+	 -->
+	<schedule>
+		<job>
+				<name>generateCardStatements</name>
+				<group>datapumps</group>
+				<job-class>com.chare.infrastructure.scheduler.Job</job-class>
+				<durability>false</durability>
+				<recover>false</recover>
+				<job-data-map>
+					<entry>
+						<key>jobClassName</key>
+						<value>com.chare.mcb.service.GenerateCardStatementsTask</value>
+					</entry>
+				</job-data-map>
+		</job>
+			<trigger>
+				<cron>
+					<name>generateCardStatementsTrigger</name>
+					<group>datapumps</group>
+					<job-name>generateCardStatements</job-name>
+					<job-group>datapumps</job-group>
+					<cron-expression>0 0 11 ? * MON-FRI</cron-expression>
+				</cron>
+			</trigger>
+	</schedule>
+</job-scheduling-data>

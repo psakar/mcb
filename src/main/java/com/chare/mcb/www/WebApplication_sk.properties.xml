@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties><comment>sk</comment>
+<!--
+<entry key=""></entry>
+<entry key=""></entry>
+-->
+<entry key="StringValidator.range">${label} - text '${input}' musí být dlouhý od ${minimum} do ${maximum} znaků.</entry>
+<entry key="StringValidator.minimum">${label} - text '${input}' musí být dlouhý nejméně ${minimum} znaků.</entry>
+<entry key="StringValidator.maximum">${label} - text '${input}' musí být dlouhý nejvíce ${maximum} znaků.</entry>
+<entry key="StringValidator.exact">${label} - text '${input}' musí být dlouhý přesně ${exact} znak(ů).</entry>
+
+<entry key="DateValidator.range">${label} - datum '${input}' musí být mezi ${minimum} a ${maximum}.</entry>
+<entry key="DateValidator.minimum">${label} - datum '${input}' musí být později než ${minimum}.</entry>
+<entry key="DateValidator.maximum">${label} - datum '${input}' musí být dříve než ${maximum}.</entry>
+
+
+<entry key="showAll">Zobraziť všetko</entry>
+<entry key="exportToCsv">Export do CSV</entry>
+<entry key="resolve">Vyhľadať typy prevodov a poplatkov</entry>
+<entry key="generate">Vytvoriť zaúčtovanie</entry>
+<entry key="uploadStatement">Nahrať výpis</entry>
+<entry key="postingFile.title">Súbor zaúčtovaní</entry>
+<entry key="postingFile.export">Exportovať</entry>
+<entry key="postingFile.disapprove">Zamietnuť</entry>
+<entry key="postingFile.filename">Názov súboru</entry>
+<entry key="postingFile.created">Vytvorený</entry>
+<entry key="postingFile.createdUsername">Vytvoril</entry>
+<entry key="postingFile.exported">Exportovaný</entry>
+<entry key="postingFile.exportedUsername">Exportoval</entry>
+
+<entry key="generateCardStatement.title">Generuj karetní výpis</entry>
+<entry key="generateCardStatement.cardNumber">Číslo karty</entry>
+<entry key="generateCardStatement.dateFrom">Datum od</entry>
+<entry key="generateCardStatement.dateTo">Datum do</entry>
+<entry key="generateCardStatement.statementNumber">Číslo výpisu</entry>
+<entry key="generateCardStatement.generate">Generovat</entry>
+<entry key="generateCardStatement.emptyStatement">Výpis je prázdný</entry>
+
+<entry key="booking.valueDate">Dátum transakcie</entry>
+<entry key="booking.businessDate">Zaúčtované dňa</entry>
+<entry key="booking.details">Popis transakcie</entry>
+<entry key="booking.amount">Čiastka</entry>
+<entry key="booking.creditAccount">Kredit. účet</entry>
+<entry key="booking.debitAccount">Debit. účet</entry>
+
+<entry key="cardStatement.title">Prehľad transakcií vykonaných platobnou kartou</entry>
+<entry key="cardStatement.number">Poradové číslo</entry>
+<entry key="cardStatement.statementDate">Generováno dne</entry>
+<entry key="cardStatement.limit">Limit</entry>
+<entry key="cardStatement.cardNumber">Číslo karty</entry>
+<entry key="cardStatement.account">Číslo účtu</entry>
+<entry key="cardStatement.accountCurrency">Mena účtu</entry>
+<entry key="cardStatement.cardHolder">Držiteľ karty</entry>
+<entry key="cardStatement.page">Strana</entry>
+<entry key="cardStatement.bookDate">Zaúčtované dňa</entry>
+<entry key="cardStatement.transactionDate">Dátum transakcie</entry>
+<entry key="cardStatement.transactionAmount">Pôvodná čiastka</entry>
+<entry key="cardStatement.amount">Zaúčtovaná čiastka v EUR</entry>
+<entry key="cardStatement.details">Detaily</entry>
+<entry key="cardStatement.periodStart">Prehľad od dňa</entry>
+<entry key="cardStatement.periodEnd">          do</entry>
+
+<entry key="confirmDelete">Zrušiť vymazanie ? Pokiaľ chcete naozaj vymazať záznam kliknite na tlačítko 'Zrušiť'"</entry>
+<entry key="NavigatorLabel">Zobrazuji ${from} až ${to} z ${of}</entry>
+
+<entry key="yes">áno</entry>
+<entry key="no">nie</entry>
+<entry key="errorUserDelete">Vymazanie užívateľa zlyhalo</entry>
+<entry key="errorPasswordReset">Reset hesla zlyhal</entry>
+
+<entry key="MCB">Master Card Bratislava</entry>
+<entry key="menu.home">Úvod</entry>
+<entry key="menu.contact">Podpora</entry>
+<entry key="menu.help">Nápoveda</entry>
+<entry key="menu.logout">Odhlásenie</entry>
+<entry key="menu.login">Prihlásenie</entry>
+<entry key="menu.mcb">MCB</entry>
+<entry key="menu.mcb.uploadStatement">Nahrať výpis</entry>
+<entry key="menu.mcb.exportPostings">Export do IBS</entry>
+<entry key="menu.mcb.cards">Karty</entry>
+<entry key="menu.mcb.statements">Výpisy</entry>
+<entry key="menu.administration">Správa</entry>
+<entry key="menu.administration.users">Užívatelia</entry>
+<entry key="menu.administration.settings">Nastavenia</entry>
+<entry key="menu.administration.cardTypes">Typy kariet</entry>
+<entry key="menu.administration.transferTypes">Typy prevodov</entry>
+<entry key="menu.administration.feeTypes">Typy poplatkov</entry>
+<entry key="menu.administration.generateCardStatement">Gen. karetního výpisu</entry>
+<entry key="menu.administration.calendar">Kalendár</entry>
+<entry key="menu.profile">Môj profil</entry>
+<entry key="menu.profile.info">Info</entry>
+<entry key="menu.profile.changePassword">Zmeniť heslo</entry>
+<entry key="menu.profile.edit">Zmeniť</entry>
+
+<entry key="editProfile.title">Zmeniť profil</entry>
+<entry key="profile.title">Môj profil</entry>
+<entry key="profile.info">Info</entry>
+
+<entry key="settings.title">Settings</entry>
+
+<entry key="add">Add</entry>
+
+
+<entry key="changePassword.title">Zmena hesla</entry>
+
+<entry key="login.title">Prihlásenie</entry>
+<entry key="login.welcome">Vitajte na stránkach intranetu. Pre spustenie aplikácie zadajte prosím Vaše užívateľské meno a heslo. V prípade problémov alebo nejasností kontaktujte prosím technickú</entry>
+<entry key="login.support">podporu</entry>
+<entry key="login.error_username">Užívateľské meno nie je zadané</entry>
+<entry key="login.username">Užívateľské meno</entry>
+<entry key="login.password">Heslo</entry>
+<entry key="login.failed">Prihlásenie nebolo úspešné</entry>
+
+<entry key="filter">Hľadať</entry>
+
+<entry key="cards.title">Karty</entry>
+<entry key="card.title">Karta</entry>
+<entry key="card.number">Číslo</entry>
+<entry key="card.cardType">Typ karty</entry>
+<entry key="card.holderName">Meno držiteľa</entry>
+<entry key="card.email">Email</entry>
+<entry key="card.phone">Telefón</entry>
+<entry key="card.addressTitle">Adresa Titul</entry>
+<entry key="card.addressName">Adresa Meno</entry>
+<entry key="card.addressName2">Adresa Meno 2</entry>
+<entry key="card.addressNameName2">Adresa Meno</entry>
+<entry key="card.addressStreet">Adresa Ulica</entry>
+<entry key="card.addressZip">Adresa PSČ</entry>
+<entry key="card.addressTown">Adresa Mesto</entry>
+<entry key="card.addressZipTown">Adresa PSČ a Mesto</entry>
+<entry key="card.addressCountry">Adresa Štát</entry>
+<entry key="card.activeFrom">Aktívna od</entry>
+<entry key="card.activeTo">Aktívna do</entry>
+<entry key="card.settlementAccount">Účet pre vysporiadanie</entry>
+<entry key="card.statementPeriod">Perióda výpisov</entry>
+<entry key="card.language">Jazyk</entry>
+<entry key="card.limit">Limit</entry>
+<entry key="card.lastStatementNr">Č. posledného výpisu</entry>
+<entry key="card.lastStatementDate">Dátum posledného výpisu</entry>
+<entry key="card.nextStatementDate">Dátum nasledujúceho výpisu</entry>
+
+<entry key="cardTypes.title">Typy kariet</entry>
+<entry key="cardType.title">Typ karty</entry>
+<entry key="cardType.code">Kód</entry>
+<entry key="cardType.description1">Popis en</entry>
+<entry key="cardType.description2">Popis cz</entry>
+<entry key="cardType.description3">Popis sk</entry>
+
+<entry key="feeTypes.title">Typy poplatkov</entry>
+<entry key="feeType.title">Typ poplatku</entry>
+<entry key="feeType.code">Kód</entry>
+<entry key="feeType.description1">Popis en</entry>
+<entry key="feeType.description2">Popis cz</entry>
+<entry key="feeType.description3">Popis sk</entry>
+<entry key="feeType.cardType">Typ karty</entry>
+<entry key="feeType.amount">Čiastka</entry>
+<entry key="feeType.percentage">Percentá</entry>
+<entry key="feeType.settlementAccount">ˇUčet pre vysporiadanie</entry>
+<entry key="feeType.transferType">Typ prevodu</entry>
+
+
+<entry key="transferTypes.title">Typy prevodov</entry>
+<entry key="transferType.title">Typ prevodu</entry>
+<entry key="transferType.code">Kód</entry>
+<entry key="transferType.description1">Popis en</entry>
+<entry key="transferType.description2">Popis cz</entry>
+<entry key="transferType.description3">Popis sk</entry>
+<entry key="transferType.settlementType">Typ vysporiadania</entry>
+<entry key="transferType.settlementAccount">Účet pre vysporiadanie</entry>
+<entry key="transferType.cardTransactionType">Typ kartovej transakcie</entry>
+
+<entry key="settlementType.0">Vysporiadanie klient</entry>
+<entry key="settlementType.1">Vysporiadanie banka</entry>
+<entry key="settlementType.2">Vysporiadanie klient s poplatkom</entry>
+
+<entry key="cardTransactionType.0">Kartová transakcia</entry>
+<entry key="cardTransactionType.1">Poplatok kartovej transakcie</entry>
+<entry key="cardTransactionType.2">Poplatok</entry>
+
+<entry key="statementPeriod.0">denná</entry>
+<entry key="statementPeriod.1">týždenná</entry>
+<entry key="statementPeriod.2">mesačná</entry>
+
+<entry key="userRole.code">Kód</entry>
+<entry key="userRole.description">Popis</entry>
+
+<entry key="users.title">Užívatelia</entry>
+<entry key="user.title">Užívateľ</entry>
+<entry key="user.username">Užívateľské meno</entry>
+<entry key="user.name">Meno</entry>
+<entry key="user.surname">Priezvisko</entry>
+<entry key="user.phone">Telefón</entry>
+<entry key="user.locale">Prostredie</entry>
+<entry key="user.email">Email</entry>
+<entry key="user.localeCode">Jazyk</entry>
+<entry key="user.lastAccess">Posledný prístup</entry>
+<entry key="user.surname">Priezvisko</entry>
+<entry key="user.fullname">Meno</entry>
+<entry key="user.unsuccessfulCount">Neuspešné prihlásenia</entry>
+<entry key="user.enabled">Povolený</entry>
+<entry key="user.languageId">Jazyk</entry>
+<entry key="user.roles">Role</entry>
+
+<entry key="resetPassword">Reset hesla</entry>
+
+<entry key="add">Pridať</entry>
+<entry key="remove">Odstrániť</entry>
+<entry key="edit">Edit</entry>
+<entry key="save">Save</entry>
+
+<entry key="setting.title">Nastavenia</entry>
+<entry key="setting.code">Kód</entry>
+<entry key="setting.value">Hodnota</entry>
+<entry key="setting.type">Typ</entry>
+<entry key="setting.description1">Popis1</entry>
+<entry key="setting.description2">Popis2</entry>
+<entry key="setting.description3">Popis3</entry>
+
+<entry key="calendar.title">Kalendár</entry>
+<entry key="calendar.id_date">Dátum</entry>
+<entry key="calendar.holiday">Sviatok</entry>
+<entry key="calendar.changeHoliday">Zmeniť</entry>
+
+<entry key="language.en">Anglický</entry>
+<entry key="language.de">Nemecký</entry>
+<entry key="language.cs">Český</entry>
+
+<entry key="yes">Áno</entry>
+<entry key="no">Nie</entry>
+
+<entry key="find">Hľadaj</entry>
+
+<entry key="submit">Submit</entry>
+<entry key="search">Hľadaj</entry>
+<entry key="select">Zvoľ</entry>
+
+<entry key="address.street">Ulica/Číslo domu</entry>
+<entry key="address.zip">PSČ</entry>
+<entry key="address.town">Mesto</entry>
+<entry key="address.country">Štát</entry>
+<entry key="address.language">Jazyk</entry>
+
+<entry key="null">---</entry>
+<entry key="help">Nápoveda</entry>
+<entry key="menu">Menu</entry>
+
+<entry key="delete">Zmazať</entry>
+
+<entry key="password">Heslo</entry>
+<entry key="changePassword">Zmeniť heslo</entry>
+<entry key="oldPassword">Staré heslo</entry>
+<entry key="newPassword">Nové heslo</entry>
+<entry key="verifiedPassword">Overujúce heslo</entry>
+<entry key="passwordChanged">Heslo bolo zmenené</entry>
+<entry key="passwordNotVerified">Nové heslo sa nezhoduje s overujúcim heslom</entry>
+<entry key="wrongPassword">Nesprávne heslo</entry>
+
+<entry key="statements.title">Výpisy</entry>
+<entry key="statement.title">Výpis</entry>
+<entry key="statement.number">Číslo</entry>
+<entry key="statement.year">Rok</entry>
+<entry key="statement.sourceFilename">Zo súboru</entry>
+<entry key="statement.account">Účet</entry>
+<entry key="statement.statementDate">Dátum</entry>
+<entry key="statement.openingBalance">Počiatočný zostatok</entry>
+<entry key="statement.closingBalance">Konečný zostatok</entry>
+
+<entry key="statementLine.amount">Čiastka</entry>
+<entry key="statementLine.valueDate">Valuta</entry>
+<entry key="statementLine.number">Č.</entry>
+<entry key="statementLine.details1">Detaily 1</entry>
+<entry key="statementLine.details2">Detaily 2</entry>
+<entry key="statementLine.details3">Detaily 3</entry>
+<entry key="statementLine.details4">Detaily 4</entry>
+<entry key="statementLine.reference1">Reference 1</entry>
+<entry key="statementLine.reference2">Reference 2</entry>
+<entry key="statementLine.swiftType">Typ</entry>
+<entry key="statementLine.transferType">Typ prevodu</entry>
+<entry key="statementLine.details">Detaily</entry>
+<entry key="statementLine.cardTransaction">Kartová transakcia</entry>
+<entry key="statementLine.cardTransactionCardNumber">Číslo karty</entry>
+<entry key="statementLine.cardTransactionDate">Dátum transakcie</entry>
+<entry key="statementLine.cardTransactionAmount">Čiastka tr.</entry>
+<entry key="statementLine.cardTransactionFeeType">Typ poplatku</entry>
+<entry key="statementLine.cardTransactionFee">Čiastka poplatku</entry>
+<entry key="postingFile">Súbor zaúčtovaní</entry>
+<entry key="statement.date">Dátum</entry>
+<entry key="lineNumber">Č. riadky</entry>
+</properties>

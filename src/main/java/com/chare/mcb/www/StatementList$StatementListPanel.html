@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd"
+>
+<body>
+<wicket:panel>
+<span style="font-size: 12px;" wicket:id="navigator">[Navigator]</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="navigatorLabel">Navigator Label</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="showAll">Zobrazit vše</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="exportToCsv">Export do CSV</span>
+<table wicket:id="list" border="1" class="content" cellpadding="1" cellspacing="0">
+  <thead>
+    <tr>
+      <th><a wicket:id="uploadStatement"><wicket:message key="uploadStatement">Upload</wicket:message></a></th>
+      <th wicket:id="year"><wicket:message key="statement.year">Year</wicket:message></th>
+      <th wicket:id="number"><wicket:message key="statement.number">Number</wicket:message></th>
+      <th wicket:id="postingFile"><wicket:message key="statement.postingFile">PostingFile</wicket:message></th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr wicket:id="rows">
+      <td><a wicket:id="edit"><wicket:message key="edit"></wicket:message></a></td>
+      <td><span wicket:id="year"></span></td>
+      <td><span wicket:id="number"></span></td>
+      <td><a wicket:id="postingFile"><span wicket:id="filename"></span></a></td>
+      <td><a wicket:id="remove"><wicket:message key="remove"></wicket:message></a></td>
+    </tr>
+  </tbody>
+</table>
+</wicket:panel>
+</body>
+</html>

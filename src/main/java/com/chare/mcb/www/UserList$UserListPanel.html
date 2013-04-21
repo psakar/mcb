@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd"
+>
+<body>
+<wicket:panel>
+<span style="font-size: 12px;" wicket:id="navigator">[Navigator]</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="navigatorLabel">Navigator Label</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="showAll">Zobrazit vše</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="exportToCsv">Export do CSV</span>
+<table wicket:id="list" border="1" class="content" cellpadding="1" cellspacing="0">
+  <thead>
+    <tr>
+      <th><a wicket:id="new"><wicket:message key="add">Add</wicket:message></a></th>
+      <th wicket:id="username"><wicket:message key="user.username"></wicket:message></th>
+      <th wicket:id="fullname"><wicket:message key="user.fullname"></wicket:message></th>
+      <th wicket:id="unsuccessfulCount"><wicket:message key="user.unsuccessfulCount"></wicket:message></th>
+      <th wicket:id="locale"><wicket:message key="user.locale"></wicket:message></th>
+      <th wicket:id="enabled"><wicket:message key="user.enabled"></wicket:message></th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr wicket:id="rows">
+      <td><a wicket:id="edit"><wicket:message key="edit"></wicket:message></a></td>
+      <td><span wicket:id="username"></span></td>
+      <td><span wicket:id="fullname"></span></td>
+      <td><span wicket:id="unsuccessfulCount"></span></td>
+      <td><span wicket:id="locale"></span></td>
+      <td><span wicket:id="enabled"></span></td>
+      <td><a wicket:id="resetPassword"><wicket:message key="resetPassword"></wicket:message></a></td>
+      <td><a wicket:id="remove"><wicket:message key="remove"></wicket:message></a></td>
+    </tr>
+  </tbody>
+</table>
+</wicket:panel>
+</body>
+</html>

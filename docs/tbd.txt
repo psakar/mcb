@@ -1,0 +1,82 @@
+jboss shutdown error - spring closes EMF ?
+
+13:59:57,286 WARN  [org.jboss.msc.service.fail] MSC00004: Failure during stop of service jboss.persistenceunit."mcb.war#mcb": org.hibernate.HibernateException: registry does not contain entity manager factory: mcb.war#mcb
+	at org.hibernate.ejb.internal.EntityManagerFactoryRegistry.removeEntityManagerFactory(EntityManagerFactoryRegistry.java:117)
+	at org.hibernate.ejb.EntityManagerFactoryImpl.close(EntityManagerFactoryImpl.java:195)
+	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl.stop(PersistenceUnitServiceImpl.java:98)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.stopService(ServiceControllerImpl.java:1911) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+
+
+
+
+Co se tyce loga, chtel bych to jeste s kolegynemi probrat, protoze listinne vypisy z
+uctu se tisknou na listy
+s predtistenym logem v hlavicce a informaci o boardu v zapati. Pokud by tedy chteli
+tisknout na ciste A4, toto
+by tam melo byt. Zneni a umisteni zahlavi a zapati jeste pripadne upresnim, az se s
+nimi dohodnu.
+
+Teoreticky muze vzniknout potreba nekteremu z klientu negenerovat vypis, nebot napr.
+usoudi, ze jsou pro nej plne
+postacujici informace, ktere ma ke karetnim transakcim jiz na vypise z uctu. Na
+karte Karty je perioda vypis jako
+povinna... Jak tohle resit ?
+
+
+
+
+CHYBA:
+ Zneni hlasky pri pokusu nacist jiz jednou nacteny soubor je chybne. Prosim
+ opravit na zneni cca: 'Jednou nacteny vypis nelze znovu nacist.'
+
+
+
+Seznam změn
+- pravidla pro zadané heslo - pozadovat minimalne 8 znaku (alespon 1 cislo, 1 velké písmeno a 1 spec. znak)
+
+vypis - zobrazit statement period ? jak pro denni ?
+
+card list - filter podle všech polí
+
+Card statement localization
+- localized titles
+- one date and number format for all locales dd.MM.yyyy #.##0,00
+
+
+- FIXME - typ převodu - allow null card transaction type
+
+statement list ordering
+- statement number left pad with zeros or convert to int
+
+
+calculated fee settled to client account with original fee
+
+
+file uploader service
+  check statement number is sequential
+
+transfer type form
+- settlement account mandatory if settlement type BANK
+
+fee type form
+	currencyfield amount
+	numberfield percentage
+
+card list
+  filter
+
+
+
+Validace formulářů
+Filtrování seznamů
+
+
+
+
+http://www.brucephillips.name/blog/index.cfm/2012/4/20/Java-EE-6-Example-Projects-For-Eclipse-and-Maven-Users
+
+
+Build number
+http://mojo.codehaus.org/buildnumber-maven-plugin/usage.html
+http://blog.codehangover.com/track-every-build-number-with-maven/
+http://maven.apache.org/shared/maven-archiver/index.html

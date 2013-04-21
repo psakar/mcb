@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+<Configure id="Server" class="org.eclipse.jetty.server.Server">
+	<Call class="java.lang.System" name="setProperty">
+		<Arg>mcb.settings</Arg>
+		<Arg>conf/configuration_linux.ini</Arg>
+	</Call>
+	<Call class="java.lang.System" name="setProperty">
+		<Arg>mcb.loggerSettings</Arg>
+		<Arg>conf/logger_linux.ini</Arg>
+	</Call>
+</Configure>

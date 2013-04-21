@@ -1,0 +1,18 @@
+Upload statement file
+---------------------
+parse file into Statement entity
+for each statement line resolve transfer type.
+lines with unresolved transfer types must be processed manually by user.
+
+
+Transfer type resolution
+- find tranfer type based on line details
+- if card related, parse card transaction details
+   - if uknown card throw exception
+- if card transaction with fee, find fee type and calculate fee
+
+Generate bookings
+ - check card
+  - card inactive throw exception
+change in card or fee setup during transfer type resolution is out of scope !!!
+ - recalculate fee ? ()

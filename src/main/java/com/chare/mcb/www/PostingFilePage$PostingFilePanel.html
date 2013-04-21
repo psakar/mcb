@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd"
+>
+<body>
+<wicket:panel>
+	<table border="0" class="content" cellpadding="1" cellspacing="0"	width="100%">
+		<tr>
+			<td style="width: 120px;"><wicket:message key="postingFile.filename">Filename</wicket:message></td>
+			<td><span wicket:id="filename"></span></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="postingFile.created">Created</wicket:message></td>
+			<td><span wicket:id="created"></span></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="postingFile.createdBy">Created by</wicket:message></td>
+			<td><span wicket:id="createdUser"></span></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="postingFile.exported">Exported</wicket:message></td>
+			<td><span wicket:id="exported"></span></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="postingFile.exportedBy">Exported by</wicket:message></td>
+			<td><span wicket:id="exportedUser"></span></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<a wicket:id="export"><wicket:message key="postingFile.export">Export</wicket:message></a>
+				&nbsp;<a wicket:id="disapprove"><wicket:message key="postingFile.disapprove">Disapprove</wicket:message></a>
+				<!--
+				&nbsp;<a wicket:id="statement"><wicket:message key="statement">Statement</wicket:message></a>
+				 -->
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table wicket:id="list" border="0" class="content" cellpadding="0" cellspacing="0" width="900px">
+					<thead>
+						<tr>
+							<th style="width: 40px;text-align: right;"><wicket:message key="lineNumber">Line nr.</wicket:message></th>
+							<th style="width: 120px;text-align: right;"><wicket:message key="booking.amount">Amount</wicket:message></th>
+							<th style="width: 80px;"><wicket:message key="booking.valueDate">Value date</wicket:message></th>
+							<th style="width: 80px;"><wicket:message key="booking.businessDate">Business date</wicket:message></th>
+							<th style="width: 120px;"><wicket:message key="booking.debitAccount">Debit account</wicket:message></th>
+							<th style="width: 120px;"><wicket:message key="booking.creditAccount">Credit account</wicket:message></th>
+							<th><wicket:message key="booking.details">Details</wicket:message></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="rows">
+							<td style="text-align: right;"><span wicket:id="number"></span></td>
+							<td style="text-align: right;"><span wicket:id="amount"></span></td>
+							<td><span wicket:id="valueDate"></span></td>
+							<td><span wicket:id="businessDate"></span></td>
+							<td><span wicket:id="debitAccount"></span></td>
+							<td><span wicket:id="creditAccount"></span></td>
+							<td><span wicket:id="details"></span></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</table>
+</wicket:panel>
+</body>
+</html>

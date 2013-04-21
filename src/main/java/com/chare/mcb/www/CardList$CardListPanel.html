@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd"
+>
+<body>
+<wicket:panel>
+<span style="font-size: 12px;" wicket:id="navigator">[Navigator]</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="navigatorLabel">Navigator Label</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="showAll">Zobrazit vše</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="exportToCsv">Export do CSV</span>
+
+<table wicket:id="list" border="1" class="content" cellpadding="1" cellspacing="0">
+  <thead>
+    <tr>
+      <th><a wicket:id="new"><wicket:message key="add">Add</wicket:message></a></th>
+	    <th wicket:id="settlementAccount"><wicket:message key="card.settlementAccount">Settlement account</wicket:message></th>
+      <th wicket:id="number"><wicket:message key="card.number">Number</wicket:message></th>
+      <th wicket:id="cardType"><wicket:message key="card.cardType">Type</wicket:message></th>
+      <th wicket:id="holderName"><wicket:message key="card.holderName">Holder name</wicket:message></th>
+      <th wicket:id="email"><wicket:message key="card.email">Email</wicket:message></th>
+      <th wicket:id="phone"><wicket:message key="card.phone">Phone</wicket:message></th>
+      <th wicket:id="addressTitle"><wicket:message key="card.addressTitle">Address title</wicket:message></th>
+      <th wicket:id="addressNameName2"><wicket:message key="card.addressNameName2">Address name</wicket:message></th>
+      <th wicket:id="addressStreet"><wicket:message key="card.addressStreet">Address street</wicket:message></th>
+      <th wicket:id="addressZipTown"><wicket:message key="card.addressZipTown">Address zip and town</wicket:message></th>
+      <th wicket:id="addressCountry"><wicket:message key="card.addressCountry">Address country</wicket:message></th>
+	    <th wicket:id="language"><wicket:message key="card.language">Language</wicket:message></th>
+	    <th wicket:id="statementPeriod"><wicket:message key="card.statementPeriod">Statement period</wicket:message></th>
+	    <th wicket:id="lastStatementNr"><wicket:message key="card.lastStatementNr">Last statement nr.</wicket:message></th>
+	    <th wicket:id="limit"><wicket:message key="card.limit">Limit</wicket:message></th>
+	    <th wicket:id="activeFrom"><wicket:message key="card.activeFrom">Active from</wicket:message></th>
+	    <th wicket:id="activeTo"><wicket:message key="card.activeTo">Active to</wicket:message></th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr wicket:id="rows">
+      <td><a wicket:id="edit"><wicket:message key="edit"></wicket:message></a></td>
+      <td><span wicket:id="settlementAccount"></span></td>
+      <td><span wicket:id="number"></span></td>
+      <td><span wicket:id="cardType"></span></td>
+      <td><span wicket:id="holderName"></span></td>
+      <td><span wicket:id="email"></span></td>
+      <td><span wicket:id="phone"></span></td>
+      <td><span wicket:id="addressTitle"></span></td>
+      <td><span wicket:id="addressNameName2"></span></td>
+      <td><span wicket:id="addressStreet"></span></td>
+      <td><span wicket:id="addressZipTown"></span></td>
+      <td><span wicket:id="addressCountry"></span></td>
+      <td><span wicket:id="language"></span></td>
+      <td><span wicket:id="statementPeriod"></span></td>
+      <td><span wicket:id="lastStatementNr"></span></td>
+      <td><span wicket:id="limit"></span></td>
+      <td><span wicket:id="activeFrom"></span></td>
+      <td><span wicket:id="activeTo"></span></td>
+      <td><a wicket:id="remove"><wicket:message key="remove"></wicket:message></a></td>
+    </tr>
+  </tbody>
+</table>
+</wicket:panel>
+</body>
+</html>

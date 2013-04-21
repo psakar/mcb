@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="mcb" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.chare.mcb.entity.Booking</class>
+		<class>com.chare.mcb.entity.CardFeeType</class>
+		<class>com.chare.mcb.entity.CardItem</class>
+		<class>com.chare.mcb.entity.Card</class>
+		<class>com.chare.mcb.entity.CardStatementLine</class>
+		<class>com.chare.mcb.entity.CardTransaction</class>
+		<class>com.chare.mcb.entity.CardType</class>
+		<class>com.chare.mcb.entity.FeeType</class>
+		<class>com.chare.mcb.entity.PostingFileItem</class>
+		<class>com.chare.mcb.entity.PostingFile</class>
+		<class>com.chare.mcb.entity.Role</class>
+		<class>com.chare.mcb.entity.Setting</class>
+		<class>com.chare.mcb.entity.StatementItem</class>
+		<class>com.chare.mcb.entity.Statement</class>
+		<class>com.chare.mcb.entity.StatementLine</class>
+		<class>com.chare.mcb.entity.TransferType</class>
+		<class>com.chare.mcb.entity.UserItem</class>
+		<class>com.chare.mcb.entity.User</class>
+		<class>com.chare.mcb.entity.UserRole</class>
+		<properties>
+			<!-- uncomment to enable container managed JPA -->
+			<!--
+			//jboss
+			<property name="hibernate.connection.datasource" value="java:jboss/datasources/mcb" />
+			<property name="jboss.entity.manager.factory.jndi.name" value="java:jboss/persistence-units/mcb"/>
+			-->
+			<!-- END OF uncomment to enable container managed JPA -->
+			<!--
+			//tomcat name (do not include)
+			<property name="hibernate.connection.datasource" value="java:comp/env/jdbc/mcb" />
+			-->
+			<!-- to disable container managed entity manager factory -->
+            <!-- comment out to enable container managed JPA -->
+		 	<property name="jboss.as.jpa.managed" value="false"/>
+  	        <!-- END OF comment out to enable container managed JPA -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SybaseAnywhereDialect" />
+			<!-- property name="hibernate.dialect" value="org.hibernate.dialect.SQLAnywhere11Dialect"/ -->
+			<property name="hibernate.show_sql" value="false" />
+		</properties>
+	</persistence-unit>
+</persistence>
+

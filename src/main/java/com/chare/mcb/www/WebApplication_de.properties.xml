@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties><comment>de</comment>
+<!--
+<entry key=""></entry>
+<entry key=""></entry>
+-->
+<entry key="StringValidator.range">${label} - ${input}' must be between ${minimum} and ${maximum} characters.</entry>
+<entry key="StringValidator.minimum">${label} - ${input}' must be at least ${minimum} characters.</entry>
+<entry key="StringValidator.maximum">${label} - ${input}' must be at most ${maximum} characters.</entry>
+<entry key="StringValidator.exact">${label} - ${input}' must be exactly ${exact} characters long.</entry>
+
+<entry key="DateValidator.range">${label} - ${input}' must be between ${minimum} and ${maximum}.</entry>
+<entry key="DateValidator.minimum">${label} - ${input}' must be later than ${minimum}.</entry>
+<entry key="DateValidator.maximum">${label} - ${input}' must be before ${maximum}.</entry>
+
+
+<entry key="showAll">Show all</entry>
+<entry key="exportToCsv">Export to CSV</entry>
+<entry key="resolve">Find transfer types and fees</entry>
+<entry key="generate">Generate posting file</entry>
+<entry key="uploadStatement">Upload stmt.</entry>
+<entry key="postingFile.title">Posting file</entry>
+<entry key="postingFile.export">Export</entry>
+<entry key="postingFile.disapprove">Disapprove</entry>
+<entry key="postingFile.filename">Filename</entry>
+<entry key="postingFile.created">Created</entry>
+<entry key="postingFile.createdUsername">Created by</entry>
+<entry key="postingFile.exported">Exported</entry>
+<entry key="postingFile.exportedUsername">Exported by</entry>
+
+<entry key="generateCardStatement.title">Generate card statement</entry>
+<entry key="generateCardStatement.cardNumber">Card number</entry>
+<entry key="generateCardStatement.dateFrom">Date from</entry>
+<entry key="generateCardStatement.dateTo">Date to</entry>
+<entry key="generateCardStatement.statementNumber">Statement nr.</entry>
+<entry key="generateCardStatement.generate">Generate</entry>
+<entry key="generateCardStatement.emptyStatement">Statement is empty</entry>
+
+<entry key="booking.valueDate">Value d.</entry>
+<entry key="booking.businessDate">Book d.</entry>
+<entry key="booking.details">Details</entry>
+<entry key="booking.amount">Amount</entry>
+<entry key="booking.creditAccount">Credit ac.</entry>
+<entry key="booking.debitAccount">Debit ac.</entry>
+
+<entry key="cardStatement.title">Card transactions statement</entry>
+<entry key="cardStatement.number">Statement nr.</entry>
+<entry key="cardStatement.statementDate">Generated</entry>
+<entry key="cardStatement.limit">Limit</entry>
+<entry key="cardStatement.cardNumber">Card number</entry>
+<entry key="cardStatement.account">Account number</entry>
+<entry key="cardStatement.accountCurrency">Account currency</entry>
+<entry key="cardStatement.cardHolder">Card holder</entry>
+<entry key="cardStatement.page">Page</entry>
+<entry key="cardStatement.bookDate">Book.d.</entry>
+<entry key="cardStatement.transactionDate">Trans.d.</entry>
+<entry key="cardStatement.transactionAmount">Trans. amt.</entry>
+<entry key="cardStatement.amount">Amount in EUR</entry>
+<entry key="cardStatement.details">Details</entry>
+<entry key="cardStatement.periodStart">Statement date from</entry>
+<entry key="cardStatement.periodEnd">               to</entry>
+
+<entry key="confirmDelete">Cancel delete ? If you want to really delete the record please click button 'Cancel'"</entry>
+<entry key="NavigatorLabel">Showing ${from} to ${to} from ${of}</entry>
+
+<entry key="yes">yes</entry>
+<entry key="no">no</entry>
+<entry key="errorUserDelete">Failed to delete user</entry>
+<entry key="errorPasswordReset">Failed to reset password</entry>
+
+<entry key="MCB">Master Card Bratislava</entry>
+<entry key="menu.home">Home</entry>
+<entry key="menu.contact">Contact</entry>
+<entry key="menu.help">Help</entry>
+<entry key="menu.logout">Logout</entry>
+<entry key="menu.login">Login</entry>
+<entry key="menu.mcb">MC Bratislava</entry>
+<entry key="menu.mcb.uploadStatement">Upload statement</entry>
+<entry key="menu.mcb.exportPostings">Export postings</entry>
+<entry key="menu.mcb.cards">Cards</entry>
+<entry key="menu.mcb.statements">Statements</entry>
+<entry key="menu.administration">Administration</entry>
+<entry key="menu.administration.users">Users</entry>
+<entry key="menu.administration.settings">Settings</entry>
+<entry key="menu.administration.cardTypes">Card types</entry>
+<entry key="menu.administration.transferTypes">Transfer types</entry>
+<entry key="menu.administration.feeTypes">Fee types</entry>
+<entry key="menu.administration.generateCardStatement">Generate card stmt.</entry>
+<entry key="menu.administration.calendar">Calendar</entry>
+<entry key="menu.profile">My profile</entry>
+<entry key="menu.profile.info">Info</entry>
+<entry key="menu.profile.changePassword">Change password</entry>
+<entry key="menu.profile.edit">Change</entry>
+
+<entry key="editProfile.title">Change profile</entry>
+<entry key="profile.title">My profile</entry>
+<entry key="profile.info">Info</entry>
+
+<entry key="settings.title">Settings</entry>
+
+<entry key="add">Add</entry>
+
+
+<entry key="changePassword.title">Password change</entry>
+
+<entry key="login.title">Login</entry>
+<entry key="login.welcome">Welcome to the intranet. To start application please enter your username and password below. In case of any problems or discrepancies please contact technical </entry>
+<entry key="login.support"> support</entry>
+<entry key="login.error_username">Username not entered</entry>
+<entry key="login.username">Username</entry>
+<entry key="login.password">Password</entry>
+<entry key="login.failed">Login failed</entry>
+
+<entry key="filter">Filter</entry>
+
+<entry key="cards.title">Cards</entry>
+<entry key="card.title">Card</entry>
+<entry key="card.number">Number</entry>
+<entry key="card.cardType">Card type</entry>
+<entry key="card.holderName">Holder name</entry>
+<entry key="card.email">Email</entry>
+<entry key="card.phone">Phone</entry>
+<entry key="card.addressTitle">Address Title</entry>
+<entry key="card.addressName">Address Name</entry>
+<entry key="card.addressName2">Address Name 2</entry>
+<entry key="card.addressNameName2">Address Name</entry>
+<entry key="card.addressStreet">Address Street</entry>
+<entry key="card.addressZip">Address Zip</entry>
+<entry key="card.addressTown">Address Town</entry>
+<entry key="card.addressZipTown">Address Zip and town</entry>
+<entry key="card.addressCountry">Address Country</entry>
+<entry key="card.activeFrom">Active from</entry>
+<entry key="card.activeTo">Active to</entry>
+<entry key="card.settlementAccount">Settlement account</entry>
+<entry key="card.statementPeriod">Statement period</entry>
+<entry key="card.language">Language</entry>
+<entry key="card.limit">Limit</entry>
+<entry key="card.lastStatementNr">Last statement nr.</entry>
+<entry key="card.lastStatementDate">Datum posl. výpisu</entry>
+<entry key="card.nextStatementDate">Datum příštího výp.</entry>
+
+<entry key="cardTypes.title">Card types</entry>
+<entry key="cardType.title">Card type</entry>
+<entry key="cardType.code">Code</entry>
+<entry key="cardType.description1">Description en</entry>
+<entry key="cardType.description2">Description cz</entry>
+<entry key="cardType.description3">Description sk</entry>
+
+<entry key="feeTypes.title">Fee types</entry>
+<entry key="feeType.title">Fee type</entry>
+<entry key="feeType.code">Code</entry>
+<entry key="feeType.description1">Description en</entry>
+<entry key="feeType.description2">Description cz</entry>
+<entry key="feeType.description3">Description sk</entry>
+<entry key="feeType.cardType">Card type</entry>
+<entry key="feeType.amount">Amount</entry>
+<entry key="feeType.percentage">Percentage</entry>
+<entry key="feeType.settlementAccount">Settlement account</entry>
+<entry key="feeType.transferType">Transfer type</entry>
+
+
+<entry key="transferTypes.title">Transfer types</entry>
+<entry key="transferType.title">Transfer type</entry>
+<entry key="transferType.code">Code</entry>
+<entry key="transferType.description1">Description en</entry>
+<entry key="transferType.description2">Description cz</entry>
+<entry key="transferType.description3">Description sk</entry>
+<entry key="transferType.settlementType">Settlement type</entry>
+<entry key="transferType.settlementAccount">Settlement account</entry>
+<entry key="transferType.cardTransactionType">Card transaction type</entry>
+
+<entry key="settlementType.0">Client settlement</entry>
+<entry key="settlementType.1">Bank settlement</entry>
+<entry key="settlementType.2">Client settlement with fee</entry>
+
+<entry key="cardTransactionType.0">Card transaction</entry>
+<entry key="cardTransactionType.1">Card transaction fee</entry>
+<entry key="cardTransactionType.2">Fee</entry>
+
+<entry key="statementPeriod.0">daily</entry>
+<entry key="statementPeriod.1">weekly</entry>
+<entry key="statementPeriod.2">monthly</entry>
+
+<entry key="userRole.code">Code</entry>
+<entry key="userRole.description">Description</entry>
+
+<entry key="users.title">Users</entry>
+<entry key="user.title">User</entry>
+<entry key="user.username">Username</entry>
+<entry key="user.name">Name</entry>
+<entry key="user.surname">Surname</entry>
+<entry key="user.phone">Phone</entry>
+<entry key="user.locale">Locale</entry>
+<entry key="user.email">Email</entry>
+<entry key="user.localeCode">Locale</entry>
+<entry key="user.lastAccess">Last access</entry>
+<entry key="user.surname">Surname</entry>
+<entry key="user.fullname">Name</entry>
+<entry key="user.unsuccessfulCount">Unsuccessful logins</entry>
+<entry key="user.enabled">Enabled</entry>
+<entry key="user.languageId">Language</entry>
+<entry key="user.roles">Roles</entry>
+
+<entry key="resetPassword">Reset password</entry>
+
+<entry key="add">Add</entry>
+<entry key="remove">Remove</entry>
+<entry key="edit">Edit</entry>
+<entry key="save">Save</entry>
+
+<entry key="setting.title">Setting</entry>
+<entry key="setting.code">Code</entry>
+<entry key="setting.value">Value</entry>
+<entry key="setting.type">Type</entry>
+<entry key="setting.description1">Description1</entry>
+<entry key="setting.description2">Description2</entry>
+<entry key="setting.description3">Description3</entry>
+
+<entry key="calendar.title">Calendar</entry>
+<entry key="calendar.id_date">Date</entry>
+<entry key="calendar.holiday">Holiday</entry>
+<entry key="calendar.changeHoliday">Change</entry>
+
+<entry key="language.en">English</entry>
+<entry key="language.de">German</entry>
+<entry key="language.cs">Czech</entry>
+
+<entry key="yes">Yes</entry>
+<entry key="no">No</entry>
+
+<entry key="find">Find</entry>
+
+<entry key="submit">Submit</entry>
+<entry key="search">Search</entry>
+<entry key="select">Select</entry>
+
+<entry key="address.street">Street</entry>
+<entry key="address.zip">Zip</entry>
+<entry key="address.town">Town</entry>
+<entry key="address.country">Country</entry>
+<entry key="address.language">Language</entry>
+
+<entry key="null">---</entry>
+<entry key="help">Help</entry>
+<entry key="menu">Menu</entry>
+
+<entry key="delete">Delete</entry>
+
+<entry key="password">Password</entry>
+<entry key="changePassword">Change password</entry>
+<entry key="oldPassword">Old password</entry>
+<entry key="newPassword">New password</entry>
+<entry key="verifiedPassword">Verify password</entry>
+<entry key="passwordChanged">Password was changed</entry>
+<entry key="passwordNotVerified">New password did not match verifying password</entry>
+<entry key="wrongPassword">Wrong old password</entry>
+
+<entry key="statements.title">Statements</entry>
+<entry key="statement.title">Statement</entry>
+<entry key="statement.number">Number</entry>
+<entry key="statement.year">Year</entry>
+<entry key="statement.sourceFilename">Source file</entry>
+<entry key="statement.account">Account</entry>
+<entry key="statement.statementDate">Date</entry>
+<entry key="statement.openingBalance">Opening balance</entry>
+<entry key="statement.closingBalance">Closing balance</entry>
+
+<entry key="statementLine.amount">Amount</entry>
+<entry key="statementLine.valueDate">Value d.</entry>
+<entry key="statementLine.number">Nr.</entry>
+<entry key="statementLine.details1">Details 1</entry>
+<entry key="statementLine.details2">Details 2</entry>
+<entry key="statementLine.details3">Details 3</entry>
+<entry key="statementLine.details4">Details 4</entry>
+<entry key="statementLine.reference1">Reference 1</entry>
+<entry key="statementLine.reference1">Reference 1</entry>
+<entry key="statementLine.swiftType">Type</entry>
+<entry key="statementLine.transferType">Transfer type</entry>
+<entry key="statementLine.details">Details</entry>
+<entry key="statementLine.cardTransaction">Card transaction</entry>
+<entry key="statementLine.cardTransactionCardNumber">Card nr.</entry>
+<entry key="statementLine.cardTransactionDate">Tr. date</entry>
+<entry key="statementLine.cardTransactionAmount">Tr. amount</entry>
+<entry key="statementLine.cardTransactionFeeType">Fee type</entry>
+<entry key="statementLine.cardTransactionFee">Fee amount</entry>
+<entry key="postingFile">Posting file</entry>
+<entry key="statement.date">Date</entry>
+<entry key="lineNumber">Line nr.</entry>
+</properties>

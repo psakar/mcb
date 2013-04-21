@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd"
+>
+<body>
+<wicket:panel>
+<form wicket:id="form">
+<table border="1" class="content" cellpadding="1" cellspacing="0">
+  <thead>
+    <tr>
+      <th><wicket:message key="userRole.code"></wicket:message></th>
+      <th><wicket:message key="userRole.description"></wicket:message></th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr wicket:id="rows">
+      <td><span wicket:id="code"></span></td>
+      <td><span wicket:id="description"></span></td>
+      <td><a wicket:id="remove"><wicket:message key="remove"></wicket:message></a></td>
+    </tr>
+    <tr>
+      <td colspan="2"><select wicket:id="role"></select></td>
+      <td><input type="submit" wicket:id="add"/></td>
+    </tr>
+  </tbody>
+</table>
+</form>
+</wicket:panel>
+</body>
+</html>

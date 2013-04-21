@@ -1,0 +1,32 @@
+Classpath
+---------
+add PROJECT_DIR/target/webapp/WEB-INF/classes
+add MAVEN_REPO/commons-lang/commons-lang/2.3/commons-lang-2.3.jar
+add MAVEN_REPO/com/chare/library/com.chare.library.core/1.027/com.chare.library.core-1.027.jar
+add MAVEN_REPO/com/chare/library/com.chare.library.jasperreports/1.008/com.chare.library.jasperreports-1.008.jar
+add MAVEN_REPO/com/chare/library/com.chare.library.spring/1.021/com.chare.library.spring-1.021.jar
+
+
+Note: for actual version numbers of jar files please check pom.xml or run mvn dependency:tree
+
+
+Create report datasources
+-------------------------
+Click Report Datasources icon on the top of the window below menu
+Click New, select JavaBeans set datasource
+
+enter
+ name: cardStatement
+ factory class: com.chare.mcb.service.CardStatementFactoryForJasperReportDesigner
+ should be preselected option "collection of javaBeans"
+ static method: createBeanCollection
+
+
+Click New, select JavaBeans set datasource
+
+enter
+ name: cardStatementLines
+ factory class: com.chare.mcb.service.CardStatementFactoryForJasperReportDesigner
+ should be preselected option "collection of javaBeans"
+ static method: createBeanCollectionLines
+

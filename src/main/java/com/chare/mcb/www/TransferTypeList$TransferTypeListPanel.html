@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd"
+>
+<body>
+<wicket:panel>
+<span style="font-size: 12px;" wicket:id="navigator">[Navigator]</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="navigatorLabel">Navigator Label</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="showAll">Zobrazit vše</span>
+&nbsp;<span style="font-size: 12px;" wicket:id="exportToCsv">Export do CSV</span>
+<table wicket:id="list" border="1" class="content" cellpadding="1" cellspacing="0">
+  <thead>
+    <tr>
+      <th><a wicket:id="new"><wicket:message key="add">[Add]</wicket:message></a></th>
+      <th wicket:id="code"><wicket:message key="transferType.code">[code]</wicket:message></th>
+      <th wicket:id="description1"><wicket:message key="transferType.description1">[description1]</wicket:message></th>
+      <th wicket:id="description2"><wicket:message key="transferType.description2">[description2]</wicket:message></th>
+      <th wicket:id="description3"><wicket:message key="transferType.description3">[description3]</wicket:message></th>
+      <th wicket:id="settlementType"><wicket:message key="transferType.settlementType">[settlementType]</wicket:message></th>
+      <th wicket:id="settlementAccount"><wicket:message key="transferType.settlementAccount">[settlementAccount]</wicket:message></th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr wicket:id="rows">
+      <td><a wicket:id="edit"><wicket:message key="edit">[Edit]</wicket:message></a></td>
+      <td><span wicket:id="code">[code]</span></td>
+      <td><span wicket:id="description1">[description1]</span></td>
+      <td><span wicket:id="description2">[description2]</span></td>
+      <td><span wicket:id="description3">[description3]</span></td>
+      <td><span wicket:id="settlementType">[settlementType]</span></td>
+      <td><span wicket:id="settlementAccount">[settlementAccount]</span></td>
+      <td><a wicket:id="remove"><wicket:message key="remove">[remove]</wicket:message></a></td>
+    </tr>
+  </tbody>
+</table>
+</wicket:panel>
+</body>
+</html>

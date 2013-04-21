@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+   xmlns="http://java.sun.com/xml/ns/j2ee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+   metadata-complete="true"
+   version="3.0">
+	<!-- WICKET -->
+	<filter>
+		<filter-name>mcb</filter-name>
+		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>com.chare.mcb.www.WebApplication</param-value>
+		</init-param>
+		<init-param>
+			<param-name>ignorePaths</param-name>
+			<param-value>servlet,css,image,js</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>mcb</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- END OF WICKET -->
+
+	<!-- Spring framework -->
+	<context-param>
+		<param-name>contextClass</param-name>
+		<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>com.chare.mcb.Config</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	<!-- END OF Spring framework -->
+
+<!--
+	<servlet>
+		<servlet-name>controller</servlet-name>
+		<servlet-class>com.chare.mcb.www.ServletControllerImpl</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+ -->
+
+	<!-- JasperReports
+	<servlet>
+		<servlet-name>reportimage</servlet-name>
+		<servlet-class>net.sf.jasperreports.j2ee.servlets.ImageServlet</servlet-class>
+	</servlet>
+	-->
+	<!-- END OF JasperReports -->
+
+<!--
+	<servlet-mapping>
+		<servlet-name>controller</servlet-name>
+		<url-pattern>/servlet/*</url-pattern>
+	</servlet-mapping>
+ -->
+
+	<!-- JasperReports
+	<servlet-mapping>
+		<servlet-name>reportimage</servlet-name>
+		<url-pattern>/servlet/reportimage</url-pattern>
+	</servlet-mapping>
+ -->
+ 	<!-- END OF JasperReports -->
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+	</welcome-file-list>
+
+	<!-- Used by jetty to enable DataSource JNDI lookup See jetty-env.xml for
+		datasource definition -->
+	<resource-ref>
+		<res-ref-name>jdbc/mcb</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+</web-app>

@@ -1,0 +1,18 @@
+Calendar list
+=============
+17-01-2013, Petr Kutik (support@chare.eu)
+
+
+Description of changes
+======================
+User is able to change the working day in the calendar
+
+
+
+Changes
+=======
+1. Added calendar list
+   - id_date
+   - is holiday
+   - link to change holiday value
+

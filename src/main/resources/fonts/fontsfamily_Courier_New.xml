@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+
+   <fontFamily name="Courier New">
+       <normal><![CDATA[fonts/cour.ttf]]></normal>
+       <bold><![CDATA[fonts/courbd.ttf]]></bold>
+       <italic><![CDATA[fonts/couri.ttf]]></italic>
+       <boldItalic><![CDATA[fonts/courbi.ttf]]></boldItalic>
+       <pdfEncoding><![CDATA[Cp1250]]></pdfEncoding>
+       <pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+   </fontFamily>
+
+   <fontFamily name="Courier">
+       <normal><![CDATA[fonts/cour.ttf]]></normal>
+       <bold><![CDATA[fonts/courbd.ttf]]></bold>
+       <italic><![CDATA[fonts/couri.ttf]]></italic>
+       <boldItalic><![CDATA[fonts/courbi.ttf]]></boldItalic>
+       <pdfEncoding><![CDATA[Cp1250]]></pdfEncoding>
+       <pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+   </fontFamily>
+
+</fontFamilies>

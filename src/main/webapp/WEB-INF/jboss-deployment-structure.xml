@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.0">
+  <deployment>
+    <!-- comment out to enable container managed JPA -->
+    <exclusions>
+       <module name="org.hibernate"/>
+       <module name="org.antlr"/>
+    </exclusions>
+    <!-- END OF comment out to enable container managed JPA  -->
+    <dependencies>
+       <module name="org.jboss.ironjacamar.jdbcadapters"/>
+    </dependencies>
+  </deployment>
+</jboss-deployment-structure>

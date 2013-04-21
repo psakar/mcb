@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd"
+>
+<head>
+  <wicket:head>
+  <style>
+  tr.resolve {
+	  background-color: orange;
+  }
+  </style>
+  </wicket:head>
+
+</head>
+<body>
+<wicket:panel>
+	<table border="0" class="content" cellpadding="1" cellspacing="0"	width="100%">
+		<tr>
+			<td colspan="2"><a wicket:id="generate"><wicket:message key="generatePostingFile">Generate posting file</wicket:message></a>&nbsp;<a wicket:id="resolve"><wicket:message key="resolve">Resolve card transactions</wicket:message></a>&nbsp;<a wicket:id="postingFile"><wicket:message key="postingFile">Posting file</wicket:message></a></td>
+		</tr>
+		<tr>
+			<td style="width: 120px;"><wicket:message key="statement.number">Number</wicket:message></td>
+			<td><span wicket:id="number"></span></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="statement.date">Date</wicket:message></td>
+			<td><span wicket:id="statementDate"></span></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="statement.sourceFilename">Source filename</wicket:message></td>
+			<td><span wicket:id="sourceFilename"></span></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="statement.openingBalance">Opening balance</wicket:message></td>
+			<td><span wicket:id="openingBalance"></span></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="statement.closingBalance">Closing balance</wicket:message></td>
+			<td><span wicket:id="closingBalance"></span></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table wicket:id="list" border="0" class="content" cellpadding="0" cellspacing="0" width="900px">
+					<thead>
+						<tr>
+							<th>
+								<table border="1" class="content" cellpadding="0" cellspacing="0" width="1000px">
+									<thead>
+										<tr>
+											<th style="width: 40px;text-align: right;"><wicket:message key="lineNumber">Line nr.</wicket:message></th>
+											<th style="width: 100px;text-align: right;"><wicket:message key="statementLine.amount">Amount</wicket:message></th>
+											<th style="width: 80px;"><wicket:message key="statementLine.valueDate">Value date</wicket:message></th>
+											<th style="width: 140px;"><wicket:message key="statementLine.reference1">Reference1</wicket:message></th>
+											<th style="width: 60px;"><wicket:message key="statementLine.swiftType">Type</wicket:message></th>
+											<th style="width: 140px;"><wicket:message key="statementLine.reference2">Reference2</wicket:message></th>
+											<th style="width: 440px;"><wicket:message key="statementLine.transferType">Transfer type</wicket:message></th>
+										</tr>
+										<tr>
+											<th colspan="7"><wicket:message key="statementLine.details">Details</wicket:message></th>
+										</tr>
+										<tr>
+											<th colspan="7"><wicket:message key="statementLine.cardTransaction">Card transaction</wicket:message></th>
+										</tr>
+										<tr>
+											<th colspan="7">
+												<table border="0" class="content" cellpadding="0" cellspacing="0" width="1000px">
+													<thead>
+														<tr>
+															<th><wicket:message key="statementLine.cardTransactionCardNumber">Card number</wicket:message></th>
+															<th><wicket:message key="statementLine.cardTransactionDate">Date</wicket:message></th>
+															<th><wicket:message key="statementLine.cardTransactionAmount">Amount</wicket:message></th>
+															<th><wicket:message key="statementLine.cardTransactionFeeType">Fee type</wicket:message></th>
+															<th><wicket:message key="statementLine.cardTransactionFee">Fee</wicket:message></th>
+															<th><wicket:message key="statementLine.cardTransactionDate">Details 1</wicket:message></th>
+															<th><wicket:message key="statementLine.cardTransactionDate">Details 2</wicket:message></th>
+														</tr>
+													</thead>
+												</table>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="rows">
+							<td>
+								<table border="1" class="content" cellpadding="0" cellspacing="0" width="1000px">
+									<tbody>
+										<tr>
+											<td style="width: 40px;text-align: right;"><span wicket:id="number"></span></td>
+											<td style="width: 100px;text-align: right;"><span wicket:id="amount"></span></td>
+											<td style="width: 80px;"><span wicket:id="valueDate"></span></td>
+											<td style="width: 140px;"><span wicket:id="reference1"></span></td>
+											<td style="width: 60px;"><span wicket:id="swiftType"></span></td>
+											<td style="width: 140px;"><span wicket:id="reference2"></span></td>
+											<td style="width: 440px;"><form wicket:id="form" style="height: 14px;"><select wicket:id="transferType"><option id="1">Transfer type1</option></select><span wicket:id="transferTypeFeedback"></span> <input type="submit" wicket:id="save"></input> </form></td>
+										</tr>
+										<tr>
+											<td colspan="7"><span wicket:id="details1"></span><span wicket:id="details2"></span><span wicket:id="details3"></span><span wicket:id="details4"></span></td>
+										</tr>
+										<tr>
+											<td colspan="7" style="border: 0px">
+												<table border="1" class="content" cellpadding="0" cellspacing="0" width="1000px">
+													<tr>
+														<td style="width: 160px;"><span wicket:id="cardTransactionCardNumber"></span></td>
+														<td style="width: 80px;text-align: right;"><span wicket:id="cardTransactionDate"></span></td>
+														<td style="width: 120px;text-align: right;"><span wicket:id="cardTransactionAmount"></span></td>
+														<td style="width: 140px;padding-left: 2px"><span wicket:id="cardTransactionFeeType"></span></td>
+														<td style="width: 100px;text-align: right;"><span wicket:id="cardTransactionFee"></span></td>
+														<td style="width: 200px;"><span wicket:id="cardTransactionDetails1"></span></td>
+														<td style="width: 200px;"><span wicket:id="cardTransactionDetails2"></span></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		<!--
+		<tr>
+			<td><span wicket:id="cardTypeLabel"></span></td>
+			<td><select wicket:id="cardType"></select><span wicket:id="cardTypeFeedback"></span></td>
+		</tr>
+			-->
+	</table>
+	 <!--
+	<form wicket:id="form">
+	 <input wicket:id="save" type="submit"></input>
+	</form>
+		-->
+</wicket:panel>
+</body>
+</html>
