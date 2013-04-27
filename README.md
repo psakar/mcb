@@ -1,4 +1,4 @@
 mcb
 ===
 
-Test converstion of spring base project to jee 
+Test converstion of spring base project to java ee 
